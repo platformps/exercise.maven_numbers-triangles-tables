@@ -10,7 +10,7 @@ public class TableUtilities {
     }
 
     public static String getMultiplicationTable(int tableSize) {
-        
+
         String multitable = "";
 
         for(int row = 1; row <= tableSize; row++){

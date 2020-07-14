@@ -46,35 +46,16 @@ public class NumberUtilities {
     }
 
     public static String getRange(int stop) {
-        int start = 0;
-        String rangeOfNums = "";
-        while(start != stop){
-            String nextNumber = Integer.toString(start);
-            rangeOfNums += nextNumber;
-            start++;
-        }
-        return rangeOfNums;
+        return getRange(0, stop, 1);
     }
 
     public static String getRange(int start, int stop) {
-        String rangeOfNums = "";
-        while(start < stop){
-            String nextNumber = Integer.toString(start);
-            rangeOfNums += nextNumber;
-            start++;
-        }
-        return rangeOfNums;
+        return getRange(start, stop,1);
     }
 
 
     public static String getRange(int start, int stop, int step) {
-        String rangeOfNums = "";
-        while(start < stop){
-            String nextNumber = Integer.toString(start);
-            rangeOfNums += nextNumber;
-            start += step;
-        }
-        return rangeOfNums;
+        return getExponentiations(start,stop,step,1);
     }
 
 

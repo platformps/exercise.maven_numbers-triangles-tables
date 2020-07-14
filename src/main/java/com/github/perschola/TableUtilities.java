@@ -2,7 +2,15 @@ package com.github.perschola;
 
 public class TableUtilities {
     public static String getSmallMultiplicationTable() {
-        int size = 5;
+        return getMultiplicationTable(5);
+    }
+
+    public static String getLargeMultiplicationTable() {
+        return getMultiplicationTable(10);
+    }
+
+    public static String getMultiplicationTable(int tableSize) {
+        int size = tableSize;
         int start_number;
         int muitply;
         String rowString = "";
@@ -13,7 +21,10 @@ public class TableUtilities {
             muitply = (row + 1);
             start_number = (row + 1);
             for(int column = 0; column < size; column++){
-                if(start_number >= 10){
+                if(start_number >= 100){
+                    rowString += "" + Integer.toString(start_number) + " |";
+                }
+                else if(start_number >= 10){
                     rowString += " " + Integer.toString(start_number) + " |";
                 }
                 else {
@@ -24,13 +35,5 @@ public class TableUtilities {
             mulitTable += rowString + "\n";
         }
         return mulitTable;
-    }
-
-    public static String getLargeMultiplicationTable() {
-        return null;
-    }
-
-    public static String getMultiplicationTable(int tableSize) {
-        return null;
     }
 }

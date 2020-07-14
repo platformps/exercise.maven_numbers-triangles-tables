@@ -10,11 +10,10 @@ public class TableUtilities {
     }
 
     public static String getMultiplicationTable(int tableSize) {
-        int size = tableSize;
-        String rowString = "";
+        
         String multitable = "";
 
-        for(int row = 1; row <= size; row++){
+        for(int row = 1; row <= tableSize; row++){
             multitable += getMutiplicationRow(row, tableSize);
         }
         return multitable;

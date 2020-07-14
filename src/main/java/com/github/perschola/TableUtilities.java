@@ -23,13 +23,13 @@ public class TableUtilities {
         int start_number = number;
         for(int count = 0; count < size; count++){
             if(start_number >= 100){
-                rowString += "" + Integer.toString(start_number) + " |";
+                rowString += "" + start_number + " |";
             }
             else if(start_number >= 10){
-                rowString += " " + Integer.toString(start_number) + " |";
+                rowString += " " + start_number + " |";
             }
             else{
-                rowString += "  " + Integer.toString(start_number) + " |";
+                rowString += "  " + start_number + " |";
             }
             start_number += number;
         }

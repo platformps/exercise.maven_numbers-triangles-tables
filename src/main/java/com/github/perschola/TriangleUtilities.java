@@ -3,23 +3,23 @@ package com.github.perschola;
 public class TriangleUtilities {
 
     public static String getTriangle(int numberOfRows) {
-        String triangle = "";
-        String rowString = "";
+        StringBuilder triangle = new StringBuilder();
         int currentRow = 1;
         while(currentRow <= numberOfRows){
-            rowString = getRow(currentRow) + "\n";
-            triangle += rowString;
+            triangle.append(getRow(currentRow));
+            triangle.append("\n");
             currentRow++;
         }
-        return triangle;
+        return triangle.toString();
     }
 
     public static String getRow(int numberOfStars) {
-        String row = "";
+        StringBuilder row = new StringBuilder();
+        String star = "*";
         for(int count = 0; count < numberOfStars; count++){
-            row += "*";
+            row.append(star);
         }
-        return row;
+        return row.toString();
     }
 
     public static String getSmallTriangle() {

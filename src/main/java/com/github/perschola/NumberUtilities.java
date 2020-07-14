@@ -34,11 +34,11 @@ public class NumberUtilities {
 
 
     public static String getSquareNumbers(int start, int stop, int step) {
-        int numSqaured;
+        int numSquared;
         String allSquaredString = "";
        while(start < stop){
-           numSqaured = start * start;
-           allSquaredString += Integer.toString(numSqaured);
+           numSquared = start * start;
+           allSquaredString += Integer.toString(numSquared);
            start += step;
        }
        return allSquaredString;
@@ -60,8 +60,8 @@ public class NumberUtilities {
 
 
     public static String getExponentiations(int start, int stop, int step, int exponent){
-        String allExpoString = "";
-        int total = start;
+        StringBuilder allExpString = new StringBuilder();
+        int total;
         while(start < stop){
             //reset
             int count = 1;
@@ -72,9 +72,9 @@ public class NumberUtilities {
                 count++;
             }
 
-            allExpoString += Integer.toString(total);
+            allExpString.append(total);
             start += step;
         }
-        return allExpoString;
+        return allExpString.toString();
     }
 }

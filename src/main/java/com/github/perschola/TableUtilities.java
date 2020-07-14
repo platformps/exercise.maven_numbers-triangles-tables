@@ -11,25 +11,31 @@ public class TableUtilities {
 
     public static String getMultiplicationTable(int tableSize) {
 
-        String multitable = "";
 
+
+        StringBuilder multiTable = new StringBuilder();
         for(int row = 1; row <= tableSize; row++){
-            multitable += getMutiplicationRow(row, tableSize);
+            multiTable.append(getMutiplicationRow(row, tableSize));
+
         }
-        return multitable;
+        return multiTable.toString();
     }
     public static String getMutiplicationRow(int number, int size){
-        String rowString = "";
+
+        StringBuilder rowString = new StringBuilder("");
         int start_number = number;
         for(int count = 0; count < size; count++){
             if(start_number >= 100){
-                rowString += "" + start_number + " |";
+
+                rowString.append("" + start_number + " |");
             }
             else if(start_number >= 10){
-                rowString += " " + start_number + " |";
+
+                rowString.append(" " + start_number + " |");
             }
             else{
-                rowString += "  " + start_number + " |";
+
+                rowString.append("  " + start_number + " |");
             }
             start_number += number;
         }

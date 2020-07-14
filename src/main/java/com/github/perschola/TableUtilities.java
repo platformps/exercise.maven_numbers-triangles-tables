@@ -11,29 +11,29 @@ public class TableUtilities {
 
     public static String getMultiplicationTable(int tableSize) {
         int size = tableSize;
-        int start_number;
-        int muitply;
         String rowString = "";
-        String mulitTable = "";
+        String multitable = "";
 
-        for(int row = 0; row < size; row++){
-            rowString = "";
-            muitply = (row + 1);
-            start_number = (row + 1);
-            for(int column = 0; column < size; column++){
-                if(start_number >= 100){
-                    rowString += "" + Integer.toString(start_number) + " |";
-                }
-                else if(start_number >= 10){
-                    rowString += " " + Integer.toString(start_number) + " |";
-                }
-                else {
-                    rowString += "  " + Integer.toString(start_number) + " |";
-                }
-                start_number += muitply;
-            }
-            mulitTable += rowString + "\n";
+        for(int row = 1; row <= size; row++){
+            multitable += getMutiplicationRow(row, tableSize);
         }
-        return mulitTable;
+        return multitable;
+    }
+    public static String getMutiplicationRow(int number, int size){
+        String rowString = "";
+        int start_number = number;
+        for(int count = 0; count < size; count++){
+            if(start_number >= 100){
+                rowString += "" + Integer.toString(start_number) + " |";
+            }
+            else if(start_number >= 10){
+                rowString += " " + Integer.toString(start_number) + " |";
+            }
+            else{
+                rowString += "  " + Integer.toString(start_number) + " |";
+            }
+            start_number += number;
+        }
+        return rowString + "\n";
     }
 }

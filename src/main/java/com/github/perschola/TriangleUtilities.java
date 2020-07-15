@@ -15,7 +15,7 @@ public class TriangleUtilities {
 
     public static String getRow(int numberOfStars) {
         String output = "";
-        for (int i = 0; i < numberOfStars; i++) {
+        for (int i = 1; i <=numberOfStars; i++) {
             output += "*";
         }
         return output;

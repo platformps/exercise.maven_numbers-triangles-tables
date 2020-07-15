@@ -45,7 +45,12 @@ public class NumberUtilities {
 
 
     public static String getSquareNumbers(int start, int stop, int step) {
-        return null;
+        String result = "";
+        for (int i = start; i < stop; i+=step) {
+            result = result + i*i;
+        }
+
+        return result;
     }
 
     public static String getRange(int start) {

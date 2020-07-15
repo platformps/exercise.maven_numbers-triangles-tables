@@ -3,18 +3,26 @@ package com.github.perschola;
 public class TriangleUtilities {
 
     public static String getTriangle(int numberOfRows) {
-        return null;
+        String toReturn = "";
+        for (int i = 1; i < numberOfRows; i++) {
+            toReturn =toReturn + getRow(i) + "\n";
+        }
+        return toReturn;
     }
 
     public static String getRow(int numberOfStars) {
-        return null;
+        String toReturn = "";
+        for (int i = 0; i < numberOfStars; i++) {
+            toReturn = toReturn + "*";
+        }
+        return toReturn;
     }
 
     public static String getSmallTriangle() {
-        return null;
+        return getTriangle(5);
     }
 
     public static String getLargeTriangle() {
-        return null;
+        return getTriangle(10);
     }
 }

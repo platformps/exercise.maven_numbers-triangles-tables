@@ -4,10 +4,12 @@ package com.github.perschola;
 public class NumberUtilities {
     public static String getEvenNumbers(int start, int stop) {
         String even = "";
+        if (start % 2 == 0){
+            start= start+1;
+        }
         for (int i = start; i < stop; i++) {
-            if(i%2 == 0){
-                even += i;
-            }
+            even += (i);
+            i++;
         }
         return even;
     }
@@ -15,10 +17,12 @@ public class NumberUtilities {
 
     public static String getOddNumbers(int start, int stop) {
         String odd = "";
+        if (start % 2 == 1){
+            start+=1;
+        }
         for (int i = start; i < stop; i++) {
-            if(i%2 != 0){
-                odd += i;
-            }
+            odd += (i);
+            i++;
         }
         return odd;
     }

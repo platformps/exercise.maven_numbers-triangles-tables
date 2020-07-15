@@ -227,7 +227,7 @@ public class NumberUtilitiesTest {
         int exponent = 2;
 
         // : When
-        String actual = NumberUtilities.getExponentiations(start, stop, step, exponent);
+        String actual = NumberUtilities.getExponentiation(start, stop, step, exponent);
 
         Assert.assertEquals(expected, actual);
     }

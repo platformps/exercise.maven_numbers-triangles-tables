@@ -1,15 +1,21 @@
 package com.github.perschola;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class TableUtilities {
     public static String getSmallMultiplicationTable() {
-        return null;
+        return getMultiplicationTable(5);
     }
 
     public static String getLargeMultiplicationTable() {
-        return null;
+        return getMultiplicationTable(10);
     }
 
     public static String getMultiplicationTable(int tableSize) {
-        return null;
+        String output = "";
+        for(int i = 1 ;i<=tableSize;i++) {
+                output += i;
+            }
+return output;
     }
 }

@@ -25,7 +25,8 @@ public class TriangleUtilitiesTest {
                         "******\n" +
                         "*******\n" +
                         "********\n" +
-                        "*********\n";
+                        "*********\n"+
+                        "**********\n"; //Added a 10th row to make test accurate per Readme
         String actual = TriangleUtilities.getTriangle(10);
         Assert.assertEquals(expected, actual);
     }
@@ -36,7 +37,8 @@ public class TriangleUtilitiesTest {
                 "*\n" +
                         "**\n" +
                         "***\n" +
-                        "****\n";
+                        "****\n" +
+                        "*****\n"; //add 5th row to make test accurate per Readme
         String actual = TriangleUtilities.getTriangle(5);
         Assert.assertEquals(expected, actual);
     }
@@ -52,7 +54,8 @@ public class TriangleUtilitiesTest {
                 "******\n" +
                 "*******\n" +
                 "********\n" +
-                "*********\n";
+                "*********\n" +
+                        "**********\n"; //Added a 10th row to make test accurate per Readme
         String actual = TriangleUtilities.getLargeTriangle();
         Assert.assertEquals(expected, actual);
     }

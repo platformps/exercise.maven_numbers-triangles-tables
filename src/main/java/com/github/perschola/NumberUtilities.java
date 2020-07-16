@@ -65,8 +65,8 @@ public class NumberUtilities {
 
 
     public static String getRange(int start, int stop, int step) {
-        r  String result = "";
-        for (int i = start; i < stop; i++) {
+         String result = "";
+        for (int i = start; i < stop; i+=step) {
 
             result += i;
 
@@ -76,6 +76,13 @@ public class NumberUtilities {
 
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        return null;
+        String result = "";
+        for (int i = start; i < stop; i+=step) {
+
+            result += (int)Math.pow(i, exponent);
+
+
+        }
+        return result;
     }
 }

@@ -9,7 +9,7 @@ public class TriangleUtilities {
 
     public static String getTriangle(int numberOfRows) {
         String result = "";
-        for (int i = 1; i < numberOfRows; i++)
+        for (int i = 1; i <numberOfRows; i++)
             result += getRow(i) + "\n";
             return result;
         }
